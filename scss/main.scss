@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero {
+  & > img {
+    width: 100%;
+  }
+}
+
+@mixin mobile() {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+@mixin tablet() {
+  @media (min-width: 768px) and (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin media($min, $max) {
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin text($size: 36px, $weight: 900) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: 160%;
+}
+
+@mixin Btn($y: 90px, $x: 28px) {
+  color: white;
+  padding: $y $x;
+  background: #2490cc;
+  border-radius: 70px;
+}
+
+@layer utilities {
+  .content-auto {
+    content-visibility: auto;
+  }
+}
+
+.text-info {
+  @include text();
+
+  @include tablet() {
+    @include text(25px, 700);
+  }
+  @include mobile() {
+    @include text(20px, 700);
+  }
+}
+
+.title-sec {
+  @include Btn(10px, 10px);
+  @include text();
+  @include mobile() {
+    @include Btn(10px, 10px);
+    @include text(18px);
+  }
+}
