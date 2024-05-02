@@ -76,3 +76,29 @@ body {
     @include text(18px);
   }
 }
+
+.list-items {
+  @include text(36px, 700);
+  @include tablet() {
+    @include text(25px, 700);
+  }
+  @include mobile() {
+    @include text(20px, 700);
+  }
+  margin-left: 20px;
+  list-style: disc;
+}
+
+.text-items {
+  @include text(36px, 700);
+  @include tablet() {
+    @include text(25px, 700);
+  }
+  @include mobile() {
+    @include text(20px, 700);
+  }
+}
+
+.list-text {
+  padding-left: 20px;
+}

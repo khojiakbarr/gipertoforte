@@ -64,3 +64,49 @@ body {
     line-height: 160%;
   }
 }
+
+.list-items {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 160%;
+  margin-left: 20px;
+  list-style: disc;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .list-items {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 160%;
+  }
+}
+@media (max-width: 767px) {
+  .list-items {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 160%;
+  }
+}
+
+.text-items {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 160%;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .text-items {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 160%;
+  }
+}
+@media (max-width: 767px) {
+  .text-items {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 160%;
+  }
+}
+
+.list-text {
+  padding-left: 20px;
+}
