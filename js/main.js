@@ -10,7 +10,7 @@ form.addEventListener("submit", async function (e) {
   console.log(form);
   console.log(input);
 
-  let message = `<b>GIPERTA FORTE</b>\n`;
+  let message = `<b>GIPERTA FORTE 33 000 UZS</b>\n`;
   message += `<b>ism:</b>${input[0].value}\n`;
   message += `<b>nomer:</b>${input[1].value}`;
 
